@@ -11,69 +11,69 @@ PROFESSOR: Well, yesterday was easy.
 You learned all of the rules of programming
 
 看样子大家感觉还不错
-and lived
+and lived.
 
 那些几乎是所有的规则了
 Almost all of them. 
 
-所以此刻，你们算得上是所谓的---
+所以此刻 你们算得上是所谓的---
 And so at this point, you're now certified programmers 
 
-合格的程序员了
+认证程序员了
 -- it says.
 
-不过，我觉得其实是，啊...
+不过 我觉得其实是 嗯
 However, I suppose what we did is we, aah,
  
 其实只是给你们尝了点甜头
 sort of got you a little bit of into an easy state.
 
-此时此刻，你可能还在认为这门课就像用BASIC语言或者Pascal语言的某种奇葩语法写程序
+此时此刻 你可能还在认为这门课就像用BASIC语言或者Pascal语言的某种奇葩语法写程序
 Here, you still believe it's possible that this might be programming in BASIC or Pascal with just a funny syntax.
 
-然而就在今天，这种错觉将会被颠覆
+然而就在今天 这种错觉将会被颠覆
 Today, that illusion-- or you can no longer support that belief.
 
-我们即将做的事，就是要彻底粉碎这种想法
+我们即将做的 就是要彻底粉碎这种想法
 What we're going to do today is going to completely smash that.
  
-接下来，我会先在黑板上写一些程序
+接下来 我会先在黑板上写一些程序
 So let's start out by writing a few programs on the blackboard 
 
 它们之间有很多相似之处
 that have a lot in common with each other
 
-我们要做的是尝试将它们抽象出来
+我们要做的是尽可能把它们抽象起来
 What we're going to do is try to make them abstractions 
 
-这过程并不如在其它大多数语言中那么显而易见
+这过程并不如在其它大多数语言中那么显而易见 #TBD
 that are not ones that are easy to make in most languages.
  
 让我们先从简单的例子开始
-Let's start with some very simple ones 
+Let's start with some very simple ones
   
 这些例子在大多数语言中可以很容易地做出抽象
 that you can make in most languages.
-  
-假设，我有一个求和一组整数的数学表达式
+
+假设 我有一个求和一组整数的数学表达式
 Supposing I want to write the mathematical expression which adds up a bunch of integers.
 
-比如，我写下的这个表达式 --- 以i为索引，求和从a到b的整数
-So if I wanted to write down and say the sum from i equal a to b on i. 
+比如 我写下的这个表达式 --- 以i为索引 求和从a到b的整数
+So if I wanted to write down and say the sum from i equal a to b on i.
 
 你们知道用数学公式可以很方便地计算出它的结果
-Now, you know that that's an easy thing to compute in a closed form for it, 
+Now, you know that that's an easy thing to compute in a closed form for it,
 
-但我的重点不在此
+但重点不在此
 and I'm not interested in that.
 
-我想要写一个能够求和那些整数程序
+我想要写一个能够对那些整数求和的程序
 But I'm going to write a program that adds up those integers.
 
 我们能够很容易地想到
 Well, that's rather easy to do to say 
 
-定义过程SUM-INT，求和从a到b的整数，是---
+定义过程SUM-INT 求和从a到b的整数 为---
 I want to define the sum of the integers from a to b to be--
 
 接下来有两种可能性
@@ -82,7 +82,7 @@ well, it's the following two possibilities.
 如果a大于b
 If a is greater than b,
 
-那么什么也不必做，答案就是0
+那么什么也不必做 答案就是0
 well, then there's nothing to be done and the answer is zero.
 
 你要以递归的方式思考问题
