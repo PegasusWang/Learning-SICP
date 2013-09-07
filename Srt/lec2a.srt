@@ -88,13 +88,13 @@ well, then there's nothing to be done and the answer is zero.
 你要以递归的方式思考问题
 This is how you're going to have to think recursively.
 
-比如，假如我知道某个简单情形的答案
+比如 假如我知道某个简单情形的答案
 You're going to say if I have an easy case that I know the answer to,
 
 就可以直接将其作为结果
 just write it down.
 
-否则，我就需要将这个问题简化
+否则 我就需要将这个问题简化
 Otherwise, I'm going to try to reduce this problem to a simpler problem.
 
 比如在这个程序里
@@ -106,10 +106,10 @@ I'm going to make a subproblem of the simpler problem
 然后再做一些工作从而得出结果
 and then do something to the result. 
 
-所以针对这个程序，最简单的处理方式是
+所以针对这个程序 最简单的处理方式是
 So the easiest way to do this is say that 
 
-将下标，在这里是a
+将下标 在这里是a
 I'm going to add the index, which in this case is a,
 
 加上a+1到b的整数的求和结果
@@ -118,7 +118,7 @@ to the result of adding up the integers from a plus 1 to b.
 现在你们应该都能看懂这个定义了
 Now, at this point, you should have no trouble looking at such a definition.
 
-实际上，总的来说，要想得出这个过程定义还是有一些困难的
+实际上 总的来说 要想得出这个过程定义还是有一些困难的
 Indeed, coming up with such a thing might be a little hard in synthesis,
 
 但要想读明白还是比较容易的
@@ -139,31 +139,31 @@ one fewer integer than I added up for the the whole problem.
 接下来需要求和的整数序列的数目会一个个减少
 I'm adding up the one fewer one, 
 
-最后，当这个子问题求解完毕后，只要再加上a
+最后 当这个子问题求解完毕后 只要再加上a
 and that subproblem, once I've solved it, I'm going to add a to that, 
 
 就能得到整个问题的答案了
 and that will be the answer to this problem.
 
-并且，这里的最简单的情形，我不用做任何处理
+并且 这里的最简单的情形 我不用做任何处理
 And the simplest case, I don't have to do any work.
 
-接下来，我要给出另一个类似的简单问题---
+接下来 我要给出另一个类似的简单问题---
 Now, I'm also going to write down another simple one just like this,
 
-以i为下标，求和a到b的整数的平方的数学表达式
+以i为下标 求和a到b的整数的平方的数学表达式
 which is the mathematical expression, the sum of the square from i equal a to b.
 
-同样的，这个程序也很简单
+同样的 这个程序也很简单
 And again, it's a very simple program. 
 
-实际上，这个程序一开始和刚才是一样的
+实际上 这个程序一开始和刚才是一样的
 And indeed, it starts the same way.
 
-如果a大于b，那么答案就是0
+如果a大于b 那么答案就是0
 If a is greater than b, then the answer is zero. 
 
-显然，你会发现我又把这部分重复写了一遍
+显然 你会发现我又把这部分重复写了一遍
 And, of course, we're beginning to see that there's something wrong with me writing this down again.
 
 这段程序和之前是相同的
@@ -172,22 +172,22 @@ It's the same program.
 这里是a的平方加上a+1到b的平方和
 It's the sum of the square of a and the sum of the square of the increment and b.
 
-现在，你们再看看这两个程序，它们几乎是完全一样的
+现在 你们再看看这两个程序 它们几乎是完全一样的
 Now, if you look at these things, these programs are almost identical.
 
 并没有太多区别
 There's not much to distinguish them.
 
-它们有相同的条件表达式，相同的谓词，相同的推论
+它们有相同的条件表达式 相同的谓词 相同的推论
 They have the same first clause of the conditional and the same predicate and the same consequence, 
 
 并且替代部分也非常的相似
 and the alternatives are very similar, too. 
 
-事实上，唯一的一个区别是，这里是a，而这里是a的平方
+事实上 唯一的一个区别是 这里是a 而这里是a的平方
 They only differ by the fact that where here I have a, here, I have the square of a. 
 
-另一个区别，有些无关紧要
+另一个区别 有些无关紧要
 The only other difference, but this one's sort of unessential 
 
 是这个过程的名字是sum int（整数的和）
@@ -199,16 +199,16 @@ whereas the name of the procedure is sum square.
 所以这两个程序的区别微乎其微
 So the things that vary between these two are very small.
 
-现在来看，如果你重复地写了相同的东西
+现在来看 如果你重复地写了相同的东西
 Now, wherever you see yourself writing the same thing down more than once, 
 
-这就产生了一些问题，你并不应该那样做
+这就产生了一些问题 你并不应该那样做
 there's something wrong, and you shouldn't be doing it.
 
 问题并不在于你重复的劳动带来时间浪费
 And the reason is not because it's a waste of time to write something down more than once. 
 
-而是在于里面的一些思想，非常简单的思想
+而是在于里面的一些思想 非常简单的思想
 It's because there's some idea here, a very simple idea,
 
 与求和记法相关的思想 -- 就是这一部分 --
@@ -217,22 +217,22 @@ which has to do with the sigma notation-- this much--
 其并不依赖于我待求和的内容
 not depending upon what it is I'm adding up.
 
-无论何时，当要设计一个复杂的系统并且要弄明白它时，将问题拆分成尽量多的模块是很重要的，并且每一个模块要能够被独立地解释
+无论何时 当要设计一个复杂的系统并且要弄明白它时 将问题拆分成尽量多的模块是很重要的 并且每一个模块要能够被独立地解释
 And I would like to be able to-- always, whenever trying to make complicated systems and understand them, it's crucial to divide the things up into as many pieces as I can, each of which I understand separately. 
 
-我想要弄明白如何把一堆东西求和，并不依赖于要求和的内容是什么
+我想要弄明白如何把一堆东西求和 并不依赖于要求和的内容是什么
 I would like to understand the way of adding things up independently of what it is I'm adding up
 
-这样我就只需要做一次调试，做一次分析
+这样我就只需要做一次调试 做一次分析
 so I can do that having debugged it once and understood it once 
 
 还能够与其他用户分享这段程序
 and having been able to share that among many different uses of it.
 
-接下来，我有另外一个例子
+接下来 我有另外一个例子
 Here, we have another example. 
 
-这是莱布尼茨公式，用来求π/8的值
+这是莱布尼茨公式 用来求π/8的值
 This is Leibnitz's formula for finding pi over 8.
 
 这一团糟的式子是什么意思？
@@ -241,7 +241,7 @@ It's a funny, ugly mess. What is it?
 大致是1/(1*3)+1/(5*7)+1/(7*9)+...这样子
 It's something like 1 over 1 times 3 plus 1 over 5 times 7 plus 1 over 9 times 11 plus-- 
 
-有趣的是，根据一些证明，它将收敛到π/8
+有趣的是 根据一些证明 它将收敛到π/8
 and for some reason, things like this tend to have interesting values like pi over 8. 
 
 我们能发现什么？
@@ -253,16 +253,16 @@ It's the same program or almost the same program.
 也是一个求和过程
 It's a sum.
 
-我们发现在这个表达式里有一些细微的差别，它的递增的值是4，
+我们发现在这个表达式里有一些细微的差别 它的递增的值是4 
 So we're seeing the figure notation, although over here, we're dealing with incrementing by 4, so it's a slightly different problem, 
 
-所以我们需要在这里将a加4，就在鼠标所指的这个地方
+所以我们需要在这里将a加4 就在鼠标所指的这个地方
 which means that over here, I have to change a by 4, as you see right over here. 
 
 不是加1了
 It's not by 1.
 
-当然，另一个区别是
+当然 另一个区别是
 The other thing, of course, 
 
 在之前的求平方和的程序里的求和项是平方值
@@ -271,43 +271,43 @@ is that the thing that's represented by square in the previous sum of squares,
 又或是在求整数和的程序里的求和项是整数本身
 or a when adding up the integers. 
 
-在这里，我用了不同的求和项
+在这里 我用了不同的求和项
 Well, here, I have a different thing I'm adding up, a different term, 
 
 即1 / (a * (a + 2))
 which is 1 over a times a plus 2. 
 
-但是，其余部分的程序是相同的
+但是 其余部分的程序是相同的
 But the rest of this program is identical. 
 
-总之，每当我们发现有一些过程是相同的
+总之 每当我们发现有一些过程是相同的
 Well, any time we have a bunch of things like this that are identical, 
 
 我们就需要做一些抽象来包含它们
 we're going to have to come up with some sort of abstraction to cover them.
 
-回想一下，到目前为止，你们学到的只是一些语法规则
+回想一下 到目前为止 你们学到的只是一些语法规则
 If you think about this, what you've learned so far is the rules of some language, 
 
-一些基本的表达形式，一些组合的方法，抽象的方法，大概就是这些
+一些基本的表达形式 一些组合的方法 抽象的方法 大概就是这些
 some primitive, some means of combination, almost all of them, the means of abstraction, almost all of them. 
 
-但是，你们还没学到的是，公共的使用模式
+但是 你们还没学到的是 公共的使用模式
 But what you haven't learned is common patterns of usage.
 
-大多时候，你要学习的是一门语言习惯用法
+大多时候 你要学习的是一门语言习惯用法
 Now, most of the time, you learn idioms when learning a language, 
 
 它是一种有价值的公共模式
 which is a common pattern that mean things that are useful to know in a flash. 
 
-如果你是一个FORTRAN程序员，并且富有经验
+如果你是一个FORTRAN程序员 并且富有经验
 And if you build a great number of them, if you're a FORTRAN programmer, 
 
 你肯定知道
 of course, everybody knows how to-- what do you do, 
 
-比如，如何求某个数列中的最大值
+比如 如何求某个数列中的最大值
 for example, to get an integer which is the biggest integer in something. 
 
 这是经典的问题
@@ -316,7 +316,7 @@ It's a classic thing.
 每个FORTRAN程序员都知道怎么做
 Every FORTRAN programmer knows how to do that. 
 
-如果你不知道的话，你可能会陷于困境并花很长的时间想出答案
+如果你不知道的话 你可能会陷于困境并花很长的时间想出答案
 And if you don't know that, you're in real hot water because it takes a long time to think it out. 
 
 然而
@@ -325,13 +325,13 @@ However,
 在这门语言中我们想展示给你的
 one of the things you can do in this language that we're showing you 
 
-不是"鱼"，而是"渔"
+不是"鱼" 而是"渔"
 is not only do you know something like that, but you give the knowledge of that a name. 
 
 这就是我们接下来要做的事
 And so that's what we're going to be going after right now.
 
-好吧，让我们先看看这些程序的共同点
+好吧 让我们先看看这些程序的共同点
 OK, well, let's see what these things have in common. 
 
 在这里我们有一个看似一般的模式
@@ -343,16 +343,16 @@ a general pattern which covers all of the cases we've seen so far.
 这里定义了一个求和过程
 There is a sum procedure, which is being defined. 
 
-它有两个参数，代表求和的下界和上界
+它有两个参数 代表求和的下界和上界
 It has two arguments, which are a lower bound and an upper bound. 
 
 首先判断下界是否大于上界
 The lower bound is tested to be greater than the upper bound, 
 
-如果下界大于上界的话，结果就是0
+如果下界大于上界的话 结果就是0
 and if it is greater, then the result is zero. 
 
-否则，我们要对下界做一些处理
+否则 我们要对下界做一些处理
 Otherwise, we're going to do something to the lower bound, 
 
 也就是下标
@@ -388,52 +388,52 @@ Numbers are just one kind of data.
 为各种数据命名看上去也是很合理的事情
 It seems to be perfectly reasonable to give all sorts of names to all kinds of data, 
 
-比如说，“过程”
+比如说 “过程”
 for example, procedures. 
 
 并且当今很多语言都允许使用过程参数
 And now many languages allow you have procedural arguments, 
 
-现在，我们即将讨论过程参数
+现在 我们即将讨论过程参数
 and right now, we're going to talk about procedural arguments. 
 
 它们很容易处理
 They're very easy to deal with. 
 
-我们首先不去考虑过程参数，来做一些很特别的事情
+我们首先不去考虑过程参数 来做一些很特别的事情
 And shortly, we'll do some remarkable things that are not like procedural arguments.
 
-这里，定义我们的求和记法
+这里 定义我们的求和记法
 So here, we'll define our sigma notation. 
 
-过程名叫做SUM，参数为term, A, NEXT和B
+过程名叫做SUM 参数为term, A, NEXT和B
 This is called sum and it takes a term, an A, a next term, and B as arguments. 
 
-所以，它有四个参数
+所以 它有四个参数
 So it takes four arguments, 
 
 这里我写成小写没有特殊的含义
 and there was nothing particularly special about me writing this in lowercase. 
 
-我不希望它迷惑你，所以我现在把它改成大写
+我不希望它迷惑你 所以我现在把它改成大写
 I hope that it doesn't confuse you, so I'll write it in uppercase right now. 
 
 机器并不关心大小写
 The machine doesn't care.
 
-但这两个参数并不同。它们不是数字
+但这两个参数并不同 它们不是数字
 But these two arguments are different. These are not numbers. 
 
 它们是对数字进行计算的过程
 These are going to be procedures for computing something given a number. 
 
-TERM是这样一个过程，提供它一个下标
+TERM是这样一个过程 提供它一个下标
 Term will be a procedure which, when given an index, 
 
 TERM会计算出这个下标所对应的项的值
 produce the value of the term for that index. 
 
-提供NEXT过程一个下标，它会计算出下一个下标
+提供NEXT过程一个下标 它会计算出下一个下标
 Next will be given an index, which will produce the next index. 
 
 这是用来计数的
@@ -445,22 +445,22 @@ And it's very simple.
 就是字面的意思
 It's exactly what you see. 
 
-如果A大于B，结果就是0
+如果A大于B 结果就是0
 If A is greater than B, then the result is 0. 
 
-否则，结果是TERM应用于A所产生的值与TERM,下一个下标产生的结果的和
+否则 结果是TERM应用于A所产生的值与TERM,下一个下标产生的结果的和
 Otherwise, it's the sum of term applied to A and the sum of term, next index.
 
 我换个方式写
 Let me write it this way. 
 
-现在，首先我要你们看一些东西
+现在 首先我要你们看一些东西
 Now, I'd like you to see something, first of all. 
 
-我写到黑板这，然后写不下了
+我写到黑板这 然后写不下了
 I was writing here, and I ran out of space. 
 
-于是我使用了缩进，依据的是整齐打印规则
+于是我使用了缩进 依据的是整齐打印规则
 What I did is I start indenting according to the Pretty-printing rule, 
 
 意思是我把过程的每个参数对齐
@@ -478,13 +478,13 @@ and I want you to learn how to do that, too,
 这样你的程序就便于阅读和理解
 so your programs can be read and understood.
 
-现在，看看我们有什么
+现在 看看我们有什么
 However, what do we have here? 
 
 我们有四个参数：过程、下界的下标、
 We have four arguments: the procedure, the lower index- - lower bound index-- 
 
-获得下一个下标的方法，以及上界
+获得下一个下标的方法 以及上界
 the way to get the next index, and the upper bound. 
 
 在递归调用的部分实际上传递的是同一个过程
@@ -493,10 +493,10 @@ What's passed along on the recursive call is indeed the same procedure
 因为我再一次需要它了
 because I'm going to need it again, 
 
-下一个下标，是用NEXT过程计算出的
+下一个下标 是用NEXT过程计算出的
 the next index, which is using the next procedure to compute it, 
 
-计算下一个下标的过程，我也单独地需要，因为这两者是不同的
+计算下一个下标的过程 我也单独地需要 因为这两者是不同的
 the procedure for computing next, which I also have to have separately, and that's different. 
 
 计算下一个下标的过程与下一个下标是不同的
@@ -508,16 +508,16 @@ which is the result of using next on the last index.
 最后我也需要传递上界
 And I also have to pass along the upper bound. 
 
-于是，这就囊括了所有的这些，以及我们写过的其它的漂亮的程序
+于是 这就囊括了所有的这些 以及我们写过的其它的漂亮的程序
 So this captures both of these and the other nice program that we are playing with.
 
-利用这个，我们就可以很容易地写出SUM的原始实例程序
+利用这个 我们就可以很容易地写出SUM的原始实例程序
 So using this, we can write down the original program as instances of sum very simply. 
 
 A和B
 A and B. 
 
-好吧，我在这需要一个identity（恒等）过程，因为...
+好吧 我在这需要一个identity（恒等）过程 因为...
 Well, I'm going to need an identity procedure here because ,ahh, 
 
 整数的求和需要我在这里对每一个整数计算一次term
@@ -532,7 +532,7 @@ So the identity procedure on A is A
 写成X或者其它的符号也没关系
 or X or whatever, 
 
-接下来，将identity作为sum的term过程
+接下来 将identity作为sum的term过程
 and I want to say the sum of using identity of the term procedure 
 
 用A作为初始下标
@@ -550,13 +550,13 @@ This procedure does exactly the same as the sum of the integers over here,
 计算出的答案也相同
 computes the same answer.
 
-现在，值得注意的一点是
+现在 值得注意的一点是
 Now, one thing you should see, of course, 
 
 这里的形式参数写成什么都无所谓
 is that there's nothing very special over here about what I used as the formal parameter. 
 
-比如，我可以把它写成X，也没关系
+比如 我可以把它写成X 也没关系
 I could have, for example, written this X. It doesn't matter. 
 
 注意到这个X和那个X并不冲突
@@ -565,7 +565,7 @@ I just wanted you to see that this name does not conflict with this one at all.
 这是一个内部名称
 It's an internal name.
 
-对于第二个过程---平方和，它甚至更简单一些
+对于第二个过程---平方和 它甚至更简单一些
 For the second procedure here, the sum of the squares, it's even a little bit easier. 
 
 我们需要做的仅仅是将平方项加起来
@@ -589,79 +589,79 @@ the incrementer as the next term method,
 B作为上界
 and B as the upper bound.
 
-最后，来看看之前的pi sums过程
+最后 来看看之前的pi sums过程
 And finally, just for the thing that we did about pi sums, 
 
 pi-sums是...
 pi sums are sort of-- 
 
-用这种方法考虑的话，它简单到明显不过了
+用这种方法考虑的话 它简单到明显不过了
 well, it's even easier to think about them this way because I don't have to think. 
 
 我要做的其实是把我要累加的每一项从累加过程中独立出来
 What I'm doing is separating the thing I'm adding up from the method of doing the addition. 
 
-来看看，比如说，pi-sum A B这个过程
+来看看 比如说 pi-sum A B这个过程
 And so we have here, for example, pi sum A B of the sum of things. 
 
-我接下来想要写出这个term过程，但不给它命名
+我接下来想要写出这个term过程 但不给它命名
 I'm going to write the terms procedure here explicitly without giving it a name. 
 
 用匿名的方式
 This is done anonymously. 
 
-如果我只是想一次性的使用它，我并不需要给它一个名字
+如果我只是想一次性的使用它 我并不需要给它一个名字
 I don't necessarily have to give a name to something if I just want to use it once.
 
-当然，我可以写出某个表达式来产生一个过程
+当然 我可以写出某个表达式来产生一个过程
 And, of course, I can write sort of a expression that produces a procedure. 
 
-我这里使用希腊字母的λ，而不是L-A-M-B-D-A的全拼
+我这里使用希腊字母的λ 而不是L-A-M-B-D-A的全拼
 I'm going to write the Greek lambda letter here instead of L-A-M-B-D-A in general 
 
 免得占用太多黑板的空间
 to avoid taking up a lot of space on blackboards. 
 
-可惜，我们的键盘上没有λ键
+可惜 我们的键盘上没有λ键
 But unfortunately, we don't have lambda keys on our keyboards. 
 
 或许我们可以说服计算机工业界的朋友意识到（λ键的）重要性
 Maybe we can convince our friends in the computer industry that this is an important. 
 
-该lambda过程以i为参数，操作是1除以i与i+2的积
+该lambda过程以i为参数 操作是1除以i与i+2的积
 Lambda of i is the quotient of 1 and the product of i and the sum of i 2, 
 
-下标从a开始，
+下标从a开始 
 starting at a 
 
-递增方法是以i为参数，将i+4的过程
+递增方法是以i为参数 将i+4的过程
 with the way of incrementing being that procedure of an index i, which adds i to 4, 
 
 b作为上界
 and b being the upper bound. 
 
-你可以看到这种记法，将过程用作过程参数，
+你可以看到这种记法 将过程用作过程参数 
 So you can see that this notation, the invention of the procedure that takes a procedural argument, 
 
 允许我们将很多过程组合成一个
 allows us to compress a lot of these procedures into one thing. 
 
-这个过程---sums，蕴含着一系列的思想
+这个过程---sums 蕴含着一系列的思想
 This procedure, sums, covers a whole bunch of ideas.
 
 现在考虑一下为什么这是很重要的？
 Now, just why is this important? 
 
-它帮助我们将一个问题拆分成两个，实际上，它做到了这点
+它帮助我们将一个问题拆分成两个 实际上 它做到了这点
 I tried to say before that it helps us divide a problem into two pieces, and indeed, it does, 
 
-比如说，如果某个人提出了另一个实现这个的方法
+比如说 如果某个人提出了另一个实现这个的方法
 for example, if someone came up with a different way of implementing this, 
 
-当然，确实有一个
+当然 确实有一个
 which, of course, one might. 
 
-比如，一个sum过程的迭代实现
+比如 一个sum过程的迭代实现
 Here, for example, an iterative implementation of sum. 
 
 迭代实现在某种程度上也许比递归实现更好
@@ -673,16 +673,16 @@ But the important thing is that it's different.
 如果我现在用黑板上左边的那种方法实现了我的程序
 Now, supposing I had written my program this way that you see on the blackboard on the left. 
 
-是的，左边那个程序
+是的 左边那个程序
 That's correct, the left. 
 
-后来，我想要改变“求和”这个方法
+后来 我想要改变“求和”这个方法
 Well, then if I want to change the method of addition, 
 
 我就不得不修改这里的每一个程序
 then I'd have to change each of these. 
 
-然而，如果我用这里这个方法来实现的话
+然而 如果我用这里这个方法来实现的话
 Whereas if I write them like this that you see here, 
 
 那么“求和”这个方法就被封装在了sum过程里
@@ -694,7 +694,7 @@ That decomposition allows me to independently change one part of the program
 而不改变用于处理其它问题的那些部分
 and prove it perhaps without changing the other part that was written for some of the other cases. 
 
-谢谢，大家有问题吗？
+谢谢 大家有问题吗？
 Thank you. Are there any questions? 
 
 那位男士
@@ -718,7 +718,7 @@ What I have here is a-- procedures can be named by variables.
 “过程”这个概念并没有特殊的地方
 Procedures are not special. 
 
-实际上，sum square也只不过是一个变量，会产生一个值
+实际上 sum square也只不过是一个变量 会产生一个值
 Actually, sum square is a variable, which has gotten a value,
 
 这就是过程
@@ -730,19 +730,19 @@ This is define sum square to be lambda of A and B something.
 所以过程可以被命名
 So the procedure can be named. 
 
-那样的话，过程就可以被作为参数传递于过程之间
+那样的话 过程就可以被作为参数传递于过程之间
 Therefore, they can be passed from one to another, one procedure to another, as arguments. 
 
-在这里，我们做的就是把term过程作为参数传递给sum
+在这里 我们做的就是把term过程作为参数传递给sum
 Well, what we're doing here is we're passing the procedure term as an argument to sum 
 
 在下一层的递归中也会用到它
 just when we get it around in the next recursive.
 
-同样地，我们也将next过程作为参数传递了
+同样地 我们也将next过程作为参数传递了
 Here, we're passing the procedure next as an argument also. 
 
-然而，在这里我们是使用了next过程
+然而 在这里我们是使用了next过程
 However, here we're using the procedure next. 
 
 括号提现了这一点
@@ -760,7 +760,7 @@ remember that the way you think about this is
 用实际参数代换过程体中的形式参数
 that you substitute the arguments for the formal parameters in the body. 
 
-如果你还是困惑的话，就像这样想吧
+如果你还是困惑的话 就像这样想吧
 If you're ever confused, think of the thing that way.
 
 比如在SUM-INT过程中
@@ -778,7 +778,7 @@ Well, the identity procedure on A is what I get here.
 identity过程会被继续传递
 Identity is being passed along, 
 
-在这里，我将1+过程应用于了A
+在这里 我将1+过程应用于了A
 and here, I have increment 1 plus being applied to A 
 
 并且1+过程也被传递下去
@@ -787,25 +787,25 @@ and 1 plus is being passed along.
 清楚这个情况了吗？
 Does that clarify the situation?
 
-观众：我们也可以显式地定义那两个过程，然后再传递它们
+观众：我们也可以显式地定义那两个过程 然后再传递它们
 AUDIENCE: We could also define explicitly those two functions, then pass them.
 
 教授：当然可以
 PROFESSOR: Sure. 
 
-我们的确可以命名这些过程，就如我这里做的一样
+我们的确可以命名这些过程 就如我这里做的一样
 What we can do is we could have given names to them, just like I did here. 
 
-实际上，我在这里提供了很多种方式给你们
+实际上 我在这里提供了很多种方式给你们
 In fact, I gave you various ways so you could see it, a variety. 
 
-在这里，我定义了这个过程，并传递了它的名字
+在这里 我定义了这个过程 并传递了它的名字
 Here, I define the thing which I passed the name of. 
 
 我用它的名字来引用它
 I referenced it by its name. 
 
-实际上这个过程的参数是X，结果也是X
+实际上这个过程的参数是X 结果也是X
 But the thing is, in fact, that procedure, one argument X, which is X. 
 
 identity过程实际上相当于lambda (x) (x)
@@ -814,13 +814,13 @@ And the identity procedure is just lambda of X X.
 这里就是这样的
 And that's what you're seeing here. 
 
-#TBD在这里，我就给你们写出了它的规范名称
+#TBD在这里 我就给你们写出了它的规范名称
 Here, I happened to just write its canonical name there for you to see. 
 
 让我们休息5分钟吧
 Is it OK if we take our five-minute break?
 
-正如我说的，计算机用于满足人们的需求
+正如我说的 计算机用于满足人们的需求
 As I said, computers to make people happy, 
 
 而不是让人去满足计算机的需求
@@ -841,13 +841,13 @@ using a little bit of this abstraction stuff.
 请看幻灯片
 If you look at the slide, 
 
-这是我们昨天介绍的Heron of Alexandria方法，用于计算平方根
+这是我们昨天介绍的Heron of Alexandria方法 用于计算平方根
 this is the Heron of Alexandria's method of computing square roots that we saw yesterday. 
 
 看一下这个程序
 And let's see. 
 
-不管怎样，这个程序有一些复杂
+不管怎样 这个程序有一些复杂
 Well, in any case, this program is a little complicated. 
 
 现在这种情况下
@@ -856,7 +856,7 @@ And at the current state of your thinking,
 你肯定不会看着这个程序说
 you just can't look at that and say, 
 
-哦，这个程序的目的真是显而易见
+哦 这个程序的目的真是显而易见
 oh, this obviously means something very clear. 
 
 它到底在计算什么一点都不明显
@@ -889,10 +889,10 @@ I think we can use abstraction that we have learned about so far
 来说明它到底在干什么
 to clarify what's going on.
 
-现在，我们在数学上有一个对平方根结果的更好猜测
+现在 我们在数学上有一个对平方根结果的更好猜测
 Now, what we have mathematically is a procedure for improving a guess for square roots. 
 
-如果y是平方根的一个猜测值，那么我们有一个函数f
+如果y是平方根的一个猜测值 那么我们有一个函数f
 And if y is a guess for a square root, then what we want to get we'll call a function f. 
 
 用来改进猜测值
@@ -901,22 +901,22 @@ This is the means of improvement.
 我用(y+x/y)/2的结果作为改进的平方根猜测值
 I want to get y plus x/y over 2, so the average of y and x divided by y as the improved value for the square root of x 
 
-值得注意的一点是，f对根号x的求值结果就是根号x
+值得注意的一点是 f对根号x的求值结果就是根号x
 such that-- one thing you can notice about this function f is that f of the square root of f is in fact the square root of x. 
 
-因为，如果在这里我将y替换成根号x
+因为 如果在这里我将y替换成根号x
 In other words, if I take the square root of x and substitute it for y here, 
 
 将会得到根号x加上x与根号x的商
 I see the square root of x plus x divided by the square of x, which is the square root of x. 
 
-是2倍根号x除以2，结果就是根号x
+是2倍根号x除以2 结果就是根号x
 That's 2 times the square root of x divided by 2, is the square root of x.
 
-所以，实际上我们在寻找函数f的一个不动点
+所以 实际上我们在寻找函数f的一个不动点
 So, in fact, what we're really looking for is we're looking for a fixed point, a fixed point of the function f. 
 
-不动点就是一个值，将其应用到函数中，得到的还是原来的值
+不动点就是一个值 将其应用到函数中 得到的还是原来的值
 A fixed point is a place which has the property that if you put it into the function, you get the same value out. 
 
 假设你在上一堂很无聊的课
@@ -931,10 +931,10 @@ like I used to have when I went to boring lectures.
 如果你觉得无事可干
 And if you think it was really boring, 
 
-你可以进入弧度模式，不停地按cos键，按cos键，按cos键……
+你可以进入弧度模式 不停地按cos键 按cos键 按cos键……
 you put it into radians mode, and you hit cosine, and you hit cosine, and you hit cosine. 
 
-最终，你将会停在大概是0.734这个值，我记不太清了
+最终 你将会停在大概是0.734这个值 我记不太清了
 And eventually, you end up with 0.734 or something like that. 0.743, I don't remember what exactly, 
 
 越来越接近那个值
@@ -964,7 +964,7 @@ I'm going to say it specifically, the square root.
 x的平方根是一个过程的不动点
 The square root of x is the fixed point of that procedure 
 
-这个过程以y作为参数，计算出x/y和y的平均值
+这个过程以y作为参数 计算出x/y和y的平均值
 which takes an argument y and averages of x divided by y with y. 
 
 并且假定初始不动点的猜测值为1
@@ -991,7 +991,7 @@ But if somehow I had a way of finding the fixed point of the function computed b
 那么我就能得到平方根的值了
 then I would have-- that would be the square root that I'm looking for.
 
-现在，我们来看看如何求不动点
+现在 我们来看看如何求不动点
 OK, well, now let's see how we're going to write-- how we're going to come up with fixed points. 
 
 实际上这很简单
@@ -1003,10 +1003,10 @@ I'm going to write an abbreviated version here just so we understand it.
 我要找到函数f的不动点a
 I'm going to find the fixed point of a function f-- 
 
-在这个过程里，求不动点的函数我们命名为f
+在这个过程里 求不动点的函数我们命名为f
 actually, the fixed point of the function computed by the procedure whose name will be f in this procedure. 
 
-接下来，需要一个具体的值开始计算
+接下来 需要一个具体的值开始计算
 How's that? A long sentence-- starting with a particular starting value.
 
 在过程内部需要一些循环
@@ -1021,16 +1021,16 @@ hoping that it will eventually converge.
 内部的循环我们定义为内部过程
 And we will say here internal loops are written by defining internal procedures. 
 
-在这里，我需要确定我是否找到了我需要的值
+在这里 我需要确定我是否找到了我需要的值
 Well, one thing I'm going to have to do is I'm going to have to say whether I'm done. 
 
-判断这个的方法是考察旧值与新值是否足够接近，以至于无法区分
+判断这个的方法是考察旧值与新值是否足够接近 以至于无法区分
 And the way I'm going to decide when I'm done is when the old value and the new value are close enough so I can't distinguish them anymore. 
 
 相当于你在计算器上看到结果的变化最终超出了精度范围
 That's the standard thing you do on the calculator unless you look at more precision, and eventually, you run out of precision.
 
-所以，这里需要旧值和新值
+所以 这里需要旧值和新值
 So the old value and new value, 
 
 并且如果它们足够接近
@@ -1045,7 +1045,7 @@ The old value and the new value are close enough to each other
 我们就选择新值作为结果
 and let's pick the new value as the answer. 
 
-否则，我继续迭代这个过程
+否则 我继续迭代这个过程
 Otherwise, I'm going to iterate around again 
 
 将当前的新值作为下一轮的旧值
@@ -1060,13 +1060,13 @@ And so this is my iteration loop that pushes the button on the calculator.
 我可以想象计算器中有两个寄存器：旧与新
 I basically think of it as having two registers on the calculator: old and new. 
 
-在每一步中，新值成为旧值，f作用后的新值成为新的新值
+在每一步中 新值成为旧值 f作用后的新值成为新的新值
 And in each step, new becomes old, and new gets F of new. 
 
 这就是得到下一个猜测值的方法
 So this is the thing where I'm getting the next value.
 
-现在，我传入两个值来调用这个方法
+现在 我传入两个值来调用这个方法
 And now, I'm going to start this thing up by giving two values. 
 
 我详细地在黑板上写出了每一个步骤
@@ -1081,10 +1081,10 @@ However, we might want to see the whole thing over here in this transparency or 
 这里详细地写出了程序所有需要的细节
 What we have is all of the details that are required to make this thing work. 
 
-在这里，我在close-enuf过程里给出了误差
+在这里 我在close-enuf过程里给出了误差
 I have a way of getting a tolerance for a close enough procedure, which we see here. 
 
-close-enuf过程通过比较u和v差的绝对值是否小于给定的误差，来确定u和v是否足够接近
+close-enuf过程通过比较u和v差的绝对值是否小于给定的误差 来确定u和v是否足够接近
 The close enough procedure, it tests whether u and v are close enough by seeing if the absolute value of the difference in u and v is less than the given tolerance, OK? 
 
 这里是我刚才在黑板上写出的循环定义
@@ -1096,13 +1096,13 @@ and the initialization for it, which is right there.
 这很容易理解
 It's very simple.
 
-其实，我还没有说完
+其实 我还没有说完
 But let's see. I haven't told you enough. 
 
 实际上这个程序可以更简单
 It's actually easier than this. 
 
-对于这个问题，在我讲述的内容背后隐含着更多的原理支撑
+对于这个问题 在我讲述的内容背后隐含着更多的原理支撑
 There is more structure to this problem than I've already told you. 
 
 比如为什么这个方法可行
@@ -1120,10 +1120,10 @@ Why is it that I should assume that by iterating averaging the quotient of x and
 这些问题的答案都不明显
 It isn't so obvious.
 
-当然，除此之外，还会有其他的计算不动点的方法，也能得到平方根的值
+当然 除此之外 还会有其他的计算不动点的方法 也能得到平方根的值
 Surely there are other things, other procedures, which compute functions whose fixed points would also be the square root. 
 
-比如，很明显的，函数g
+比如 很明显的 函数g
 For example, the obvious one will be a new function g, 
 
 它将y映射为x/y
@@ -1150,22 +1150,22 @@ Supposing x is 2
 并且猜测的初值是1
 and I start out with 1, 
 
-我将2除以1，得到2
+我将2除以1 得到2
 and if I divide 1 into 2, I get 2. 
 
-然后我将2除以2，得到1
+然后我将2除以2 得到1
 And then if I divide 2 into 2, I get 1. 
 
-再将2除以1得到2，2除以2得到1……
+再将2除以1得到2 2除以2得到1……
 If I divide 1 into 2, I get 2, and 2 into 2, I get 1, 
 
-这样，我永远也接近不了2的平方根
+这样 我永远也接近不了2的平方根
 and I never get any closer to the square root. 
 
 它在真实值上下摆动
 It just oscillates. 
 
-实际上，这相当于一个信号处理系统
+实际上 这相当于一个信号处理系统
 So what we have is a signal processing system, 
 
 一个振荡的电路
@@ -1174,10 +1174,10 @@ an electrical circuit which is oscillating,
 我想要减小振荡的振幅
 and I want to damp out these oscillations. 
 
-当然，我可以做到这点
+当然 我可以做到这点
 Well, I can do that.
 
-在这里，我实际上用到的是平均值
+在这里 我实际上用到的是平均值
 See, what I'm really doing here when I'm taking my average, 
 
 计算的是某个振荡的均值
@@ -1192,7 +1192,7 @@ The classic way is damping out oscillations in a signal processing system.
 为什么我们不把刚才讲的策略用一种更清晰的方式表达呢？
 So why don't we write down the strategy that I just said in a more clear way? 
 
-其实，这并不那么复杂
+其实 这并不那么复杂
 Well, that's easy enough.
 
 将根号x的值定义为
@@ -1267,7 +1267,7 @@ but very specifically here to expand on that idea, to elucidate it.
 average-damp这个过程
 Well, average damp is a procedure, 
 
-将一个过程作为自己的参数，记作f
+将一个过程作为自己的参数 记作f
 which takes a procedure as its argument, which we will call f. 
 
 它产生什么呢？
@@ -1291,10 +1291,10 @@ This is a very special thing.
 我猜这是你们第一次见到一个过程产生出另一个过程作为其结果
 I think for the first time you're seeing a procedure which produces a procedure as its value. 
 
-这个过程接受了过程f，做了一些工作
+这个过程接受了过程f 做了一些工作
 This procedure takes the procedure f and does something to it 
 
-产生出一个新的过程，拥有一个参数x
+产生出一个新的过程 拥有一个参数x
 to produce a new procedure of one argument x, 
 
 计算出f...
@@ -1318,7 +1318,7 @@ It's a division.
 接着再找到这个过程的不动点
 And I'm finding to fixed point of that, 
 
-这个写法更清晰的阐明了整个过程，较之于先前这里的写法
+这个写法更清晰的阐明了整个过程 较之于先前这里的写法
 and that's a clearer way of writing down what I wrote down over here, 
 
 我找找...
@@ -1333,7 +1333,7 @@ because it tells why I am writing this down.
 我希望以上这些能在一定程度上阐明Heron-Alexandria方法
 I suppose this to some extent really clarifies what Heron of Alexandria was up to. 
 
-先到此为止吧，有什么问题吗？
+先到此为止吧 有什么问题吗？
 I suppose I'll stop now. Are there any questions?
 
 观众：在你定义average-damp过程的时候
@@ -1342,7 +1342,7 @@ AUDIENCE: So when you define average damp,
 不需要给f一个变量吗？
 don't you need to have a variable on f?
 
-教授：啊，你的问题是...
+教授：啊 你的问题是...
 PROFESSOR: Ah, the question was, and here we're having-- again, 
 
 你应该已经了解语法了
@@ -1372,7 +1372,7 @@ The formal parameter of f--
 观众：我指的是average-damp的形式参数
 AUDIENCE: The formal parameter of average damp.
 
-教授：f在这里被应用到了一个参数上，对吗？
+教授：f在这里被应用到了一个参数上 对吗？
 PROFESSOR: F is being used to apply it to an argument, right? 
 
 实际上f确实需要一个形式参数
@@ -1384,7 +1384,7 @@ Let's find out what f's formal parameter is.
 观众：我想问的是average-damp的形式参数
 AUDIENCE: The formal parameter of average damp.
 
-教授：哦，f应该是average-damp的形式参数
+教授：哦 f应该是average-damp的形式参数
 PROFESSOR: Oh, f is the formal parameter of average damp. 
 
 抱歉
@@ -1453,7 +1453,7 @@ and produces a procedure as its value.
 观众：我不太理解你为什么使用两次lambda
 AUDIENCE: I don't understand why you use lambda twice. 
 
-难道不能使用一个lambda，以f和x作为参数吗？
+难道不能使用一个lambda 以f和x作为参数吗？
 Can you just use one lambda and take two arguments f and x?
 
 教授：不能
@@ -1462,7 +1462,7 @@ PROFESSOR: No.
 观众：不能？
 AUDIENCE: You can't?
 
-教授：不，那是不同的东西了
+教授：不 那是不同的东西了
 PROFESSOR: No, that would be a different thing. 
 
 如果我在这里写成
@@ -1525,7 +1525,7 @@ I can get rid of this lambda easily.
 我不希望...
 I don't want to be-- 
 
-好吧，我说谎了
+好吧 我说谎了
 actually, I'm lying to you. 
 
 我不想照你那样去实现
@@ -1555,7 +1555,7 @@ This is equivalent,
 但我还得另写一个冗余的变量名
 but I've had to make an arbitrary name up. 
 
-这两个是等价的，但没有使用lambda
+这两个是等价的 但没有使用lambda
 This is equivalent to this without any lambdas. 
 
 lambda非常适合于需要匿名过程的地方
@@ -1618,7 +1618,7 @@ that's the zeroes-- of functions.
 举个例子
 So, for example, 
 
-求y，使得f(y)等于0
+求y 使得f(y)等于0
 to find a y such that f of y equals 0, 
 
 首先要从一个猜测值开始
@@ -1678,7 +1678,7 @@ People call it Newton's method.
 它用来计算函数f的根
 It's a method for finding the roots of the function f. 
 
-当收敛的时候，它会计算得很快
+当收敛的时候 它会计算得很快
 And it, of course, sometimes converges, and when it does, it does so very fast. 
 
 不过有时是不收敛的
@@ -1726,7 +1726,7 @@ Well, that procedure is that procedure of y,
 计算出x和根号y的差
 which is the difference between x and the square of y. 
 
-实际上，如果存在y使得这个式子等于0
+实际上 如果存在y使得这个式子等于0
 Indeed, if I had a value of y for which this was zero, 
 
 那么y就是x的平方根
@@ -1735,19 +1735,19 @@ then y would be the square root of x.
 明白吗？
 See that? 
 
-接下来，我令其从1开始尝试
+接下来 我令其从1开始尝试
 OK, I'm going to start this out searching at 1. 
 
 这完全是一个随意写下的猜测值
 Again, completely arbitrary property of square roots that I can do that.
 
-现在的问题是，Newton法应该如何实现？
+现在的问题是 Newton法应该如何实现？
 Now, how am I going to compute Newton's method? 
 
 方法的过程在这里书写了
 Well, this is the method I have it right here. 
 
-实际上，我所做的是寻找某个过程的不动点
+实际上 我所做的是寻找某个过程的不动点
 In fact, what I'm doing is looking for a fixed point of some procedure. 
 
 这个过程包含了一些复杂的表达式
@@ -1762,7 +1762,7 @@ Well, I'm trying to find the fixed point of this.
 我要找到某个y的值
 I want to find the values of y, 
 
-使得在这里带入这个值后，得到的是相同的值
+使得在这里带入这个值后 得到的是相同的值
 which if I put y in here, I get the same value out here 
 
 考虑在一定的误差范围内
@@ -1843,7 +1843,7 @@ which is also the derivative of the function computed by that procedure.
 DF就是一个计算由过程F计算的函数的导数过程
 DF will be a procedure that computes the derivative of the function computed by the procedure F. 
 
-定义好这个之后，我就要来寻找一个不动点
+定义好这个之后 我就要来寻找一个不动点
 And then given that, I will just go looking for a fixed point.
 
 我要寻找的不动点是什么的呢？
@@ -1855,7 +1855,7 @@ It's the one for that procedure of one argument x,
 计算出x减...
 which I compute by subtracting x. 
 
-x是先前的值，相当于那里的y_n
+x是先前的值 相当于那里的y_n
 That's the old-- that's the yn here. 
 
 f(x)和df(x)的商
@@ -1867,7 +1867,7 @@ starting out with the original guess.
 整个看上去很简单
 That's all very simple.
 
-现在，我还有一个部分没有写
+现在 我还有一个部分没有写
 Now, I have one part left that I haven't written, 
 
 我先需要你们回顾一下我整个的实现流程
@@ -1891,19 +1891,19 @@ I'm not going to worry about how I do it yet.
 然后再继续
 Then I go walking down here and say, well, 
 
-通过这些魔法，我大致实现了整个过程
+通过这些魔法 我大致实现了整个过程
 by some magic, I'm somehow going to figure how to do that, 
 
 即使还未实现某些方法
 but I'm going to write my program anyway. 
 
-这种按愿望思维，对于工程来说是很重要的
+这种按愿望思维 对于工程来说是很重要的
 Wishful thinking, essential to good engineering, 
 
-同样，对于计算机科学也是很重要的
+同样 对于计算机科学也是很重要的
 and certainly essential to a good computer science.
 
-那么，有多少人想让你的计算机运行得更快？
+那么 有多少人想让你的计算机运行得更快？
 So anyway, how many of you wished that your computer ran faster? 
 
 求导过程的实现并不会很困难
@@ -1924,7 +1924,7 @@ which needs one argument x.
 你们应该都清楚导数的定义
 Well, you all know this definition. 
 
-是(f(x + dx) - f(x)) / dx， 对吗？
+是(f(x + dx) - f(x)) / dx  对吗？
 It's f of x plus delta x minus f of x over delta x, right? 
 
 dx是一个很小的值
@@ -1957,7 +1957,7 @@ I'm not interested.
 这个过程接受一个过程然后产生出一个近似过程
 This is a procedure which takes a procedure and produces an approximation, 
 
-这个近似过程用于计算出某个函数的导数，函数是由给定的过程计算的
+这个近似过程用于计算出某个函数的导数 函数是由给定的过程计算的
 a procedure that computes an approximation of the derivative of the function computed by the procedure given 
 
 其中使用了大家熟悉的求导方法
@@ -2026,7 +2026,7 @@ It's the thing that takes an argument called y
 计算出x与根号y的差
 and puts out the difference between x and the square of y, 
 
-通过某种魔法，x作为自由变量从外部进入
+通过某种魔法 x作为自由变量从外部进入
 where x is some sort of free variable that comes in from the outside by some magic. 
 
 所以square-root过程需要获取到x的值
@@ -2050,7 +2050,7 @@ The f is fanned out.
 一是被用作参数传递
 Part of it goes into something else, 
 
-二是被应用到求导过程中，再将求导结果传递
+二是被应用到求导过程中 再将求导结果传递
 and the other part of it goes through a derivative process into something else 
 
 来产生一个新的过程
@@ -2068,13 +2068,13 @@ So this procedure,
 通过代换使用了（f和df）
 which contains it by substitution-- 
 
-记住，是这里的Newton法构造出了这个过程
+记住 是这里的Newton法构造出了这个过程
 remember, Newton's method over here, Newton's method builds this procedure, 
 
 并且是在Newton法中定义了f和df
 and Newton's method has in it defined f and df, 
 
-所以，f和df在这里被捕获
+所以 f和df在这里被捕获
 so those are captured over here: f and df. 
 
 利用这个过程
@@ -2095,13 +2095,13 @@ So what we've built is a very powerful engine,
 通过它我们可以制造出类似的优美的东西
 which allows us to make nice things like this.
 
-最后，我想使用Chris Strachey提出的一个基本思想作为结束
+最后 我想使用Chris Strachey提出的一个基本思想作为结束
 Now, I want to end this with basically an idea of Chris Strachey, 
 
 他是计算机科学之父之一
 one of the grandfathers of computer science.
 
-他是一位逻辑学家，大概...
+他是一位逻辑学家 大概...
 He's a logician who lived in the-- 
 
 大概10到15年前他去世了
@@ -2182,7 +2182,7 @@ Yes.
 观众：DERIV F可以直接写到fixed-point方法中取代df吗
 AUDIENCE: Could you put derivative instead of df directly in the fixed point?
 
-教授：哦，当然
+教授：哦 当然
 PROFESSOR: Oh, sure. 
 
 当然可以直接把DERIV F放到这里
@@ -2200,7 +2200,7 @@ you can put the thing that the definition is there
 你会得到相同的结果
 and you should get the same result. 
 
-实际上，那样就会看上去很有趣
+实际上 那样就会看上去很有趣
 In fact, what that would look like, it's interesting.
 
 观众：lambda
@@ -2278,7 +2278,7 @@ This is the operator of this combination.
 求值这个运算符会产生F的导数
 Evaluating this operator will, of course, produce the derivative of F.
 
-观众：甚者，是否可以在那里写成lambda表达式
+观众：甚者 是否可以在那里写成lambda表达式
 AUDIENCE: To get it one step further, you could put the lambda expression there, too.
 
 教授：哦当然
@@ -2290,7 +2290,7 @@ Any time I take something which is define,
 我也可以将其替换成它定义的具体内容
 I can put the thing it's defined to be in the place where the thing defined is. 
 
-不用去区分哪个是被定义项，哪个是定义项
+不用去区分哪个是被定义项 哪个是定义项
 I can't remember which is definiens and which is definiendum. 
 
 每当我在思考如何在课堂上向新手解释这个问题
